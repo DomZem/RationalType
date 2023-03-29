@@ -3,11 +3,13 @@ using static System.Console;
 
 namespace RationalConsoleAppDemo
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            WriteLine("hello world!");
+            BigRational u = new(1, 1);
+
+            WriteLine(u);   
         }
     }
 }
