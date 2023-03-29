@@ -12,6 +12,7 @@ namespace RationalLib
         public readonly static BigRational Zero = new(0, 1);
         public readonly static BigRational Half = new(1, 2);
 
+        #region === constructors === 
         public BigRational(BigInteger numerator, BigInteger denominator)
         {
             if (denominator < 0)
@@ -22,6 +23,12 @@ namespace RationalLib
             Numerator = numerator / nwd;
             Denominator = denominator / nwd;
         }
+
+        public BigRational(BigInteger value) : this(value, 1) { }
+        
+        public BigRational() : this(0, 1) { }
+
+        #endregion
 
         public override string ToString() => $"{Numerator}/{Denominator}";
     }
