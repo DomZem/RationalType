@@ -22,5 +22,7 @@ namespace RationalLib
             Numerator = numerator / nwd;
             Denominator = denominator / nwd;
         }
+
+        public override string ToString() => $"{Numerator}/{Denominator}";
     }
 }

@@ -30,5 +30,17 @@ namespace RationalUnitTests
             Assert.AreEqual(expectedNumerator, u.Numerator);
             Assert.AreEqual(expectedDenominator, u.Denominator);
         }
+
+        [DataTestMethod]
+        [DataRow(2, 4, "1/2")]
+        [DataRow(4, 4, "1/1")]
+        [DataRow(-6, 5, "-6/5")]
+        [DataRow(0, 5, "0/1")]
+        public void TestToString_2args(int numerator, int denominator, string expectedText)
+        {
+            var u = new BigRational(numerator, denominator);
+
+            Assert.AreEqual(u.ToString(), expectedText);
+        }
     }
 }

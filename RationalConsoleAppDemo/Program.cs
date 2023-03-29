@@ -7,7 +7,7 @@ namespace RationalConsoleAppDemo
     {
         static void Main(string[] args)
         {
-            BigRational u = new(1, 1);
+            BigRational u = new(4, 4);
 
             WriteLine(u);   
         }
